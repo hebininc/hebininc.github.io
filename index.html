@@ -303,8 +303,8 @@
       
         
           
-            <p>// 判断是否是iPhone X<br><code>#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)</code><br>// 状态栏高度<br><code>#define STATUSBAR_HEIGHT (iPhoneX ? 44.f : 20.f)</code><br>// 导航栏高度<br><code>#define NAVIGATIONBAR_HEIGHT (iPhoneX ? 88.f : 64.f)</code><br>// tabBar高度<br><code>#define TABBAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)</code><br>// home indicator<br><code>#define INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)</code></p>
-<p>尺寸为1125X2436，导航栏高度为88新增24，tabbar高度新增34</p>
+            <p>// 判断当前设备是否为iPhone X<br><code>#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)</code><br>// 状态栏高度<br><code>#define STATUSBAR_HEIGHT (iPhoneX ? 44.f : 20.f)</code><br>// 导航栏高度<br><code>#define NAVIGATIONBAR_HEIGHT (iPhoneX ? 88.f : 64.f)</code><br>// tabBar高度<br><code>#define TABBAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)</code><br>//indicator<br><code>#define INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)</code></p>
+<p>屏幕尺寸为1125X2436，导航栏高度为88新增24，tabbar高度新增34</p>
 <p>Assets.xcassets目录下需要新增iPhoneX的启动图片，可以新增一个LaunchImage目录将旧的copy过来后删除；<br>代码中通过计算的全屏布局需要检查测试；</p>
 
           
